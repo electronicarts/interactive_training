@@ -1,4 +1,5 @@
-""" The module provides simple uniform quantization under the assumption that 
+""" Copyright (C) 2019 Electronic Arts Inc.  All rights reserved.
+The module provides simple uniform quantization under the assumption that 
 the range of state variables is known. We expect observations represented 
 as a numpy array and quantize them into bins of size defined by fidelity. """
 import numpy as np
