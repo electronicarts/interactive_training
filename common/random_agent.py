@@ -1,4 +1,5 @@
-""" Random agent is the base for other agents and allows base line random action sampling."""
+""" Copyright (C) 2019 Electronic Arts Inc.  All rights reserved.
+Random agent is the base for other agents and allows base line random action sampling."""
 from common.action_info_types import ActionInfoType
 
 
