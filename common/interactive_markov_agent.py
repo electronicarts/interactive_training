@@ -1,4 +1,5 @@
-""" InteractiveMarkovAgent class combines interactive player input with the input from the ensemble model. 
+""" Copyright (C) 2019 Electronic Arts Inc.  All rights reserved.
+InteractiveMarkovAgent class combines interactive player input with the input from the ensemble model. 
 Also, it updates the ensemble as needed to capture new demonstrations from the player. """
 from common.action_info_types import ActionInfoType
 from common.interactive_agent import InteractiveAgent
