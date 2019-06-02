@@ -1,4 +1,5 @@
-""" The module provides a minimal wrapper around pyinput keyboard input. 
+""" Copyright (C) 2019 Electronic Arts Inc.  All rights reserved.
+The module provides a minimal wrapper around pyinput keyboard input. 
 See https://pythonhosted.org/pynput/keyboard.html for the original keyboard 
 listener usage example. We are interested only in a single key and do not expect 
 any multiple keys input. """
