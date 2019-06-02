@@ -1,4 +1,5 @@
-""" DemoRecorder instance records observations and actions, keeps separate 
+""" Copyright (C) 2019 Electronic Arts Inc.  All rights reserved.
+DemoRecorder instance records observations and actions, keeps separate 
 records for human demonstrations. It can save episodes as native pickled files 
 with references only to numpy and defaultdict. We use these demonstrations 
 to build Markov Ensembles. """
