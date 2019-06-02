@@ -1,4 +1,5 @@
-""" The classes cover a range of Markov model orders from min_order to max_order, 
+""" Copyright (C) 2019 Electronic Arts Inc.  All rights reserved.
+The classes cover a range of Markov model orders from min_order to max_order, 
 constructed from the same sequences of observations and raw actions. Such models 
 represent the first step in building models ensemble (see Algorithm 1 in the paper). """
 from common.action_info_types import ActionInfoType
