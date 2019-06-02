@@ -1,4 +1,5 @@
-""" Enumeration of possible action info types."""
+""" Copyright (C) 2019 Electronic Arts Inc.  All rights reserved.
+Enumeration of possible action info types."""
 
 
 class ActionInfoType:
