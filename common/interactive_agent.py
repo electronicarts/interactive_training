@@ -1,4 +1,5 @@
-""" An interactive agent allows a human player to override the actions of an agent 
+""" Copyright (C) 2019 Electronic Arts Inc.  All rights reserved.
+An interactive agent allows a human player to override the actions of an agent 
 supplied in the class instance constructor. """
 from common.action_info_types import ActionInfoType
 from common.keyboard_listener import KeyboardListener
