@@ -1,4 +1,5 @@
-"""The module demonstrates interactively trainable Mountain Car agent based on Markov Ensemble."""
+""" Copyright (C) 2019 Electronic Arts Inc.  All rights reserved.
+The module demonstrates interactively trainable Mountain Car agent based on Markov Ensemble."""
 import gym
 import numpy as np
 from pynput.keyboard import Key
