@@ -1,4 +1,4 @@
-"""
+""" Copyright (C) 2019 Electronic Arts Inc.  All rights reserved.
 A Markov model defines probabilities of transitions in a stochastic system.
 Here, using demonstration episodes (games played by a human player), 
 we compute the probabilities of the next action in the currently observed state 
