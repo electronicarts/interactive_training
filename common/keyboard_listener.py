@@ -4,8 +4,10 @@ See https://pythonhosted.org/pynput/keyboard.html for the original keyboard
 listener usage example. We are interested only in a single key and do not expect 
 any multiple keys input. """
 from pynput.keyboard import Key, Listener
+from singleton_decorator import singleton
 
 
+@singleton
 class KeyboardListener:
     def __init__(self):
         self.latest_key = None
