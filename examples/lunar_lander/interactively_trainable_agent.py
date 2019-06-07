@@ -3,7 +3,6 @@ The module demonstrates interactively trainable Lunar Lander agent based on Mark
 import gym
 import time
 import numpy as np
-from pynput.keyboard import Key
 import sys
 sys.path.append('../../')
 
@@ -31,10 +30,10 @@ if __name__ == '__main__':
     # See OpenAI documentation for the definition of the state-action space for the lander environment.
     # https://gym.openai.com/envs/LunarLander-v2/
     key_to_action = {
-        Key.space: 0,  # No action, stops all thrusters.
-        Key.right: 1,  # Right thruster
-        Key.up: 2,  # Main thruster
-        Key.left: 3  # Left thruster
+        32: 0,  # No action, stops all thrusters. Space.
+        65363: 1,  # Right thruster. Right arrow.
+        65362: 2,  # Main thruster. Up arrow.
+        65361: 3  # Left thruster. Left Arrow.
     }
     interactive_agent = InteractiveMarkovAgent(key_to_action, random_agent, mes)
 
@@ -44,6 +43,9 @@ if __name__ == '__main__':
     episode_id = 0
     for _ in range(15000):
         env.render()
+        env.unwrapped.viewer.window.on_key_press = interactive_agent.on_press
+        env.unwrapped.viewer.window.on_key_release = interactive_agent.on_release
+
         action, _ = interactive_agent.get_action(observation, reward, done, info)
         observation, reward, done, info = env.step(action)
         time.sleep(0.1)  # Simplifies human interaction.

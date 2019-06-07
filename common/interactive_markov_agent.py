@@ -17,7 +17,7 @@ class InteractiveMarkovAgent(InteractiveAgent):
         action_info = None
 
         # Check if there is human input and record that as the next action to take
-        human_action = self.key_to_action.get(self.kbd_listener.latest_key)
+        human_action = self.key_to_action.get(self.latest_key)
         if human_action is not None:
             action = human_action
             action_info = ActionInfoType.human

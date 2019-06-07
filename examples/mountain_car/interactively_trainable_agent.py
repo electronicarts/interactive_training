@@ -2,7 +2,6 @@
 The module demonstrates interactively trainable Mountain Car agent based on Markov Ensemble."""
 import gym
 import numpy as np
-from pynput.keyboard import Key
 import sys
 sys.path.append('../../')
 
@@ -27,9 +26,9 @@ if __name__ == '__main__':
     mes = MarkovEnsembleStack(min_order, max_order, quantizers)
 
     key_to_action = {
-        Key.left: 0,
-        Key.space: 1,
-        Key.right: 2
+        65361: 0,   # Left
+        32: 1,      # Space
+        65363: 2    # Right
     }
     interactive_agent = InteractiveMarkovAgent(key_to_action, random_agent, mes)
 
@@ -39,6 +38,9 @@ if __name__ == '__main__':
     episode_id = 0
     for _ in range(15000):
         env.render()
+        env.unwrapped.viewer.window.on_key_press = interactive_agent.on_press
+        env.unwrapped.viewer.window.on_key_release = interactive_agent.on_release
+
         action, _ = interactive_agent.get_action(observation, reward, done, info)
         observation, reward, done, info = env.step(action)
 
