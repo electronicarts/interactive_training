@@ -45,8 +45,8 @@ if __name__ == '__main__':
         if done:
             episode_id += 1
             print("Episode", episode_id, "ended.")
-            interactive_agent.demos.end_episode('mountain_car.pickle')
+            interactive_agent.demos.end_episode(reward, 'mountain_car.pickle')
             observation, reward, done, info = env.reset(), None, False, None
-            interactive_agent.demos.update(None, ActionInfoType.agent, observation, done)
+            interactive_agent.demos.update(None, ActionInfoType.agent, observation, reward, done)
 
     env.close()

@@ -21,7 +21,7 @@ class DemoRecorder:
 
     def end_episode(self, reward, save_file="episodes.pickle"):
         self.rewards.append(reward)
-        print('Total reward:', sum(self.rewards))
+        print('Total reward:', sum([r for r in self.rewards if r is not None]))
         if self.curr_demo:
             self.demos.append(self.curr_demo)
             self.curr_demo = defaultdict(list)
