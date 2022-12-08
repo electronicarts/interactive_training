@@ -1,4 +1,4 @@
-certifi==2019.3.9
+certifi==2022.12.7
 future==0.17.1
 gym==0.12.5
 numpy==1.16.4
